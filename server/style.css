@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+}
+.error {
+    color: red;
+}
+section {
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+}
+section h2{
+    font-weight: 400;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.temp-card h5{
+    font-weight: 400;
+    margin: 0;
+}
+.temp-card {
+    margin: 20px 0;
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+}
+.temp-card span {
+    font-size: 64px;
+}
+.temp-card span::after {
+    content: "\00B0 C";
+    font-size: 32px;
+}
+.chart {
+    width: 100%;
+    margin: 20px;
+    height: 450px;
+}
+.fan-info {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px
+}
+.date-fan-change {
+    color: #444;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .chart {
+        margin: 5px;
+    }
+    section h2{
+        font-size: 32px;
+        margin: 10px 0;
+    }
+}
