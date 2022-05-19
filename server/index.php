@@ -36,7 +36,7 @@ if ($conn->connect_error) {
         }
     }
 
-    $sql = 'SELECT DATE_FORMAT(date, "%H:%i") time FROM greenhouse WHERE fan !='. $current_temp[3] .' AND date > DATE(NOW()) ORDER BY id DESC LIMIT 1';
+    $sql = 'SELECT DATE_FORMAT(date, "%H:%i") time FROM greenhouse WHERE fan !='. $current_temp[3] .' AND date > DATE_ADD(DATE(NOW()), INTERVAL -'. $d .' DAY) AND date < DATE_ADD(DATE(NOW()), INTERVAL -'. --$d .' DAY) ORDER BY id DESC LIMIT 1'; ++$d;
 
     $result = $conn->query($sql);
 

@@ -11,7 +11,7 @@ records.forEach(r => {
     greenhouseTemp.push(r[1]);
     indoorTemp.push(r[2]);
     outdoorTemp.push(r[3]);
-    if(r[4]==1) fan.push(50);
+    if(r[4]==1) fan.push(45);
     else fan.push(NaN);
 });
 
